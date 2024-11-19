@@ -1,0 +1,12 @@
+<h1 class="mb-4">Articles</h1>
+
+<div class="list-group">
+  <% @articles.each do |article| %>
+    <a href="<%= article_path(article) %>" class="list-group-item list-group-item-action">
+      <h5 class="mb-1 text-primary"><%= article.title %></h5>
+      <p class="mb-1 text-muted">
+        <%= truncate(article.content, length: 100) %> 
+      </p>
+    </a>
+  <% end %>
+</div>
